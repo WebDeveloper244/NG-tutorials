@@ -3,11 +3,11 @@
 
     <div class="box" [ngClass]="{box2:boxColor==='red' ,  box1:boxColor==='black'}">
       <div class="my-3 mx-3" >
-        <input type="text" class="form-control" id="input1" aria-describedby="emailHelp" placeholder={{placeholderText}}>
-        <button type="button" class="btn btn-outline-dark my-2">Primary</button>
+        <input type="text" #myInput class="form-control" id="input1" aria-describedby="emailHelp" placeholder={{placeholderText}}>
+        <button type="button" (click)="onCreate(myInput)" class="btn btn-outline-dark my-2">Primary</button>
       </div>
-      <div class="total">
-        Total user <span class="">2</span>
+      <div class="total"  *ngIf="number>0">
+        Total count : <span class="">{{number}}</span>
       </div>
   </div>
 
