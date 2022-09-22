@@ -6,3 +6,12 @@
 .total > span{
     font-weight: bold;
 }
+.box1{
+    background: rgb(216, 216, 216);
+    border: 1px solid black;
+}
+
+.box2{
+    background: rgb(240, 165, 165);
+    border: 1px solid rgb(255, 0, 0);
+}
