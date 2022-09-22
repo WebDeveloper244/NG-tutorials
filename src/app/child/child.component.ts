@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,6 +10,7 @@ export class ChildComponent implements OnInit {
  @Input() boxColor:any;
  @Input() placeholderText:any;
  number:number=0;
+ @Output() inputEvent = new EventEmitter()
 
   constructor() { }
 
@@ -16,7 +18,11 @@ export class ChildComponent implements OnInit {
   }
 
   onCreate(inputValue:any){
-this.number ++;
-alert(inputValue.value)
+     if (inputValue.value.length>0)
+        this.number ++;
+        // alert(inputValue.value)
+        this.inputEvent.emit(inputValue.value)
   }
+
 }
+

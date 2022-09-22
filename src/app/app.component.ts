@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tutorials';
+  users:any=[];
+
+
+  pushUser(data:any){
+this.users.push(data)
+
+
+  }
 }

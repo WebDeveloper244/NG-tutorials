@@ -11,17 +11,14 @@
          </tr>
        </thead>
        <tbody>
-         <tr>
-           <td scope="row">john</td>
-           <td scope="row">Remove</td>
-         </tr>
-         <tr>
-           <td>Alex</td>
+         <tr *ngFor="let data of users">
+           <td>{{data}}</td>
            <td>Remove</td>
          </tr>
        </tbody>
      </table>
     </div>
+
     <div class="col border ">
      <h2>Admin</h2>
      <table class="table table-striped">
@@ -51,11 +48,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <app-child [boxColor]=" 'red' " [placeholderText]=" 'userName' "></app-child>
+      <app-child [boxColor]=" 'red' " [placeholderText]=" 'userName' "  (inputEvent)="pushUser($event)"></app-child>
     
     </div>
     <div class="col">
-      <app-child [boxColor]=" 'black' " [placeholderText]=" 'AdminName' "></app-child>
+      <app-child [boxColor]=" 'black' " [placeholderText]=" 'AdminName' " ></app-child>
     </div>
   </div>
 </div>
