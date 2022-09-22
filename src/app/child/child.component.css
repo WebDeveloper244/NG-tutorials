@@ -1,0 +1,8 @@
+.box{
+    width: 100%;
+    border: 1px solid black;
+   
+}
+.total > span{
+    font-weight: bold;
+}
